@@ -1,0 +1,24 @@
+Nome da Escola: CIEP 165 Brigadeiro Sergio Carvalho
+
+Endereço:
+Rua Exemplo, 123
+
+Horário:
+Entrada: 07:00
+Saída: 12:00
+
+Salas:
+- Laboratório de Informática
+- Biblioteca
+- Sala de Robótica
+- Quadra
+
+Professores:
+- João (Matemática)
+- Maria (Português)
+- Carlos (História)
+
+Eventos:
+- Feira Tecnológica
+- Mostra Cultural
+- Olimpíada de Matemática
