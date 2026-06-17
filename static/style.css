@@ -15,7 +15,7 @@ body{
 }
 
 .sidebar{
-    width:260px;
+    width:280px;
     background:#020617;
     border-right:1px solid #1e293b;
     padding:20px;
@@ -29,8 +29,30 @@ body{
     text-align:center;
 }
 
+#lista-chats{
+    flex:1;
+    overflow-y:auto;
+    margin-top:10px;
+}
+
+.chat-item{
+    background:#1e293b;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.chat-item:hover{
+    background:#334155;
+}
+
+.chat-item.ativo{
+    background:#2563eb;
+}
+
 .status{
-    margin-top:auto;
     background:#1e293b;
     padding:12px;
     border-radius:10px;
@@ -63,6 +85,7 @@ body{
     border-radius:16px;
     margin-bottom:15px;
     line-height:1.6;
+    animation:aparecer .2s ease;
 }
 
 .user{
@@ -72,6 +95,7 @@ body{
 
 .bot{
     background:#1e293b;
+    margin-right:auto;
 }
 
 .entrada{
@@ -89,6 +113,7 @@ input{
     background:#1e293b;
     color:white;
     font-size:16px;
+    outline:none;
 }
 
 button{
@@ -102,11 +127,24 @@ button{
 }
 
 button:hover{
-    transform:scale(1.05);
+    transform:scale(1.04);
 }
 
 button:disabled{
     opacity:.5;
+    cursor:not-allowed;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 @media(max-width:768px){
@@ -119,10 +157,37 @@ button:disabled{
         width:100%;
         flex-direction:row;
         overflow-x:auto;
+        align-items:center;
+    }
+
+    .sidebar h2{
+        display:none;
+    }
+
+    #lista-chats{
+        display:flex;
+        gap:8px;
+        overflow-x:auto;
+    }
+
+    .chat-item{
+        min-width:100px;
     }
 
     .status{
         display:none;
     }
 
+    .user,
+    .bot{
+        max-width:95%;
+    }
+
+    .entrada{
+        flex-wrap:wrap;
+    }
+
+    input{
+        min-width:100%;
+    }
 }

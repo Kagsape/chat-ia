@@ -1,49 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <title>Assistente Escolar IA</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
-
 <body>
 
 <div class="container">
 
     <aside class="sidebar">
-
         <h2>🎓 Escola IA</h2>
 
-        <button onclick="novoChat()">
-            ➕ Novo Chat
-        </button>
+        <button onclick="novoChat()">➕ Novo Chat</button>
+        <button onclick="excluirChatAtual()">🗑️ Excluir Chat</button>
+        <button onclick="pararVoz()">🔇 Parar Voz</button>
 
-        <button onclick="limparConversa()">
-            🗑️ Limpar
-        </button>
+        <div id="lista-chats"></div>
 
-        <button onclick="pararVoz()">
-            🔇 Parar Voz
-        </button>
-
-        <div class="status">
-            🟢 Online
-        </div>
-
+        <div class="status">🟢 Online</div>
     </aside>
 
     <main class="chat">
-
-        <h1>Assistente Escolar</h1>
+        <h1 id="titulo-chat">Assistente Escolar</h1>
 
         <div id="mensagens"></div>
 
         <div class="entrada">
-
-            <button onclick="iniciarMicrofone()">
-                🎤
-            </button>
+            <button onclick="iniciarMicrofone()">🎤</button>
 
             <button onclick="alternarModoContinuo()" id="btn-continuo">
                 🔁 Voz contínua
@@ -55,12 +39,8 @@
                 placeholder="Digite ou fale..."
             >
 
-            <button onclick="enviar()">
-                Enviar
-            </button>
-
+            <button onclick="enviar()">Enviar</button>
         </div>
-
     </main>
 
 </div>
@@ -68,5 +48,4 @@
 <script src="/static/script.js"></script>
 
 </body>
-
 </html>
