@@ -1,24 +1,35 @@
-Nome da Escola: CIEP 165 Brigadeiro Sergio Carvalho
+Nome da escola:
+CIEP 165
 
-Endereço:
-Rua Exemplo, 123
+Tipo:
+Escola pública
 
-Horário:
-Entrada: 07:00
-Saída: 12:00
-
-Salas:
+Setores importantes:
 - Laboratório de Informática
 - Biblioteca
-- Sala de Robótica
+- Secretaria
+- Direção
+- Coordenação
+- Sala dos professores
 - Quadra
 
-Professores:
-- João (Matemática)
-- Maria (Português)
-- Carlos (História)
+Laboratório de Informática:
+O laboratório é usado para cursos de informática, aulas, projetos com tecnologia, programação, IA, Arduino e atividades pedagógicas.
 
-Eventos:
-- Feira Tecnológica
-- Mostra Cultural
-- Olimpíada de Matemática
+Cursos e projetos:
+- Curso de Informática
+- Projetos com IA
+- Projetos com Arduino e ESP32
+- Organização da biblioteca
+- Sistema escolar com IA
+- Feira pedagógica/tecnológica
+
+Biblioteca:
+A biblioteca possui um sistema/site para organização dos livros. Não há leitura online dos livros; o sistema serve para consulta e organização.
+
+Regras para o assistente:
+- Responder sempre em português.
+- Ajudar alunos, professores e visitantes.
+- Quando não souber uma informação, dizer que ainda não tem essa informação cadastrada.
+- Não inventar horários, nomes de professores ou regras.
+- Explicar de forma simples e educada.
