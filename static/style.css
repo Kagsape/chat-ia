@@ -1,3 +1,7 @@
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
     background:#0f172a;
@@ -5,18 +9,44 @@ body{
     font-family:Segoe UI, Arial, sans-serif;
 }
 
-.chat{
-    max-width:1000px;
-    margin:auto;
+.container{
+    display:flex;
     height:100vh;
+}
+
+.sidebar{
+    width:260px;
+    background:#020617;
+    border-right:1px solid #1e293b;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.sidebar h2{
+    margin-top:0;
+    text-align:center;
+}
+
+.status{
+    margin-top:auto;
+    background:#1e293b;
+    padding:12px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.chat{
+    flex:1;
     display:flex;
     flex-direction:column;
 }
 
-h1{
+.chat h1{
     text-align:center;
-    padding:20px;
     margin:0;
+    padding:20px;
     border-bottom:1px solid #334155;
 }
 
@@ -28,12 +58,11 @@ h1{
 
 .user,
 .bot{
-    max-width:80%;
+    max-width:75%;
     padding:15px;
     border-radius:16px;
     margin-bottom:15px;
-    line-height:1.5;
-    animation:aparecer .2s ease;
+    line-height:1.6;
 }
 
 .user{
@@ -43,7 +72,6 @@ h1{
 
 .bot{
     background:#1e293b;
-    margin-right:auto;
 }
 
 .entrada{
@@ -55,22 +83,20 @@ h1{
 
 input{
     flex:1;
-    padding:15px;
     border:none;
     border-radius:12px;
+    padding:15px;
     background:#1e293b;
     color:white;
     font-size:16px;
-    outline:none;
 }
 
 button{
     border:none;
     border-radius:12px;
-    padding:15px 25px;
+    padding:12px 18px;
     background:#2563eb;
     color:white;
-    font-size:16px;
     cursor:pointer;
     transition:.2s;
 }
@@ -80,18 +106,23 @@ button:hover{
 }
 
 button:disabled{
-    opacity:.6;
-    cursor:not-allowed;
+    opacity:.5;
 }
 
-@keyframes aparecer{
-    from{
-        opacity:0;
-        transform:translateY(10px);
+@media(max-width:768px){
+
+    .container{
+        flex-direction:column;
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0);
+    .sidebar{
+        width:100%;
+        flex-direction:row;
+        overflow-x:auto;
     }
+
+    .status{
+        display:none;
+    }
+
 }

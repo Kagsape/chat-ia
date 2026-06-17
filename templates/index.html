@@ -9,37 +9,59 @@
 
 <body>
 
-<div class="chat">
+<div class="container">
 
-    <h1>🎓 Assistente Escolar IA</h1>
+    <aside class="sidebar">
 
-    <div id="mensagens"></div>
+        <h2>🎓 Escola IA</h2>
 
-    <div class="entrada">
-
-        <button onclick="iniciarMicrofone()">
-            🎤
-        </button>
-
-        <button onclick="alternarModoContinuo()" id="btn-continuo">
-            🔁 Voz contínua
-        </button>
-
-        <input
-            id="pergunta"
-            type="text"
-            placeholder="Digite ou fale..."
-        >
-
-        <button onclick="enviar()">
-            Enviar
+        <button onclick="novoChat()">
+            ➕ Novo Chat
         </button>
 
         <button onclick="limparConversa()">
-            🗑️
+            🗑️ Limpar
         </button>
 
-    </div>
+        <button onclick="pararVoz()">
+            🔇 Parar Voz
+        </button>
+
+        <div class="status">
+            🟢 Online
+        </div>
+
+    </aside>
+
+    <main class="chat">
+
+        <h1>Assistente Escolar</h1>
+
+        <div id="mensagens"></div>
+
+        <div class="entrada">
+
+            <button onclick="iniciarMicrofone()">
+                🎤
+            </button>
+
+            <button onclick="alternarModoContinuo()" id="btn-continuo">
+                🔁 Voz contínua
+            </button>
+
+            <input
+                id="pergunta"
+                type="text"
+                placeholder="Digite ou fale..."
+            >
+
+            <button onclick="enviar()">
+                Enviar
+            </button>
+
+        </div>
+
+    </main>
 
 </div>
 

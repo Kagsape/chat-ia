@@ -191,3 +191,19 @@ document
     }
 
 });
+function novoChat(){
+
+    if(confirm("Deseja iniciar uma nova conversa?")){
+
+        document
+            .getElementById("mensagens")
+            .innerHTML = "";
+
+        localStorage.removeItem("conversaIA");
+    }
+}
+
+function pararVoz(){
+
+    speechSynthesis.cancel();
+}
